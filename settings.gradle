@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'play-spring-boot'
+
+include 'quick-test'
+include 'spring-boot-mybatis'
+include 'spring-boot-redis'
+include 'spring-boot-web'
+include 'spring-boot-jpa'

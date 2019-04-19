@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+      filter:
+        stat:
+          enabled: true
+      filters: stat
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.hibernate: off
