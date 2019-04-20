@@ -3,10 +3,7 @@ package com.example.jpa.dao;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -30,4 +27,10 @@ class BaseEntity implements Serializable {
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date updatedAt;
 
+    @PrePersist
+    public void prePersist() {
+        Date now = new Date();
+        setCreatedAt(now);
+        setUpdatedAt(now);
+    }
 }
