@@ -1,9 +1,11 @@
 package com.example.swagger.controller;
 
+import com.example.swagger.controller.parameter.SaveRequest;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,8 +20,8 @@ public class PlaySwaggerController {
 
     @ApiOperation(value = "保存", notes = "执行保存")
     @PostMapping("save")
-    public ResponseEntity<?> save() {
-        return ResponseEntity.ok("save success");
+    public ResponseEntity<?> save(@RequestBody SaveRequest request) {
+        return ResponseEntity.ok(request);
     }
 
 }
