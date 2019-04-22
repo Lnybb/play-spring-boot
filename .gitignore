@@ -106,5 +106,7 @@ hs_err_pid*
 *.iws
 *.ipr
 
+/*/out
+
 
 
