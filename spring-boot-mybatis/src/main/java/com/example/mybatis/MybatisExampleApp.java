@@ -5,11 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.example.mybatis.dao")
-public class SpringBootMybatisApplication {
+@MapperScan("com.example.mybatis")
+public class MybatisExampleApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootMybatisApplication.class, args);
+        SpringApplication.run(MybatisExampleApp.class, args);
     }
 
 }
