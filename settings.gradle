@@ -6,6 +6,7 @@ pluginManagement {
 
 rootProject.name = 'play-spring-boot'
 
+include 'spring-ioc'
 include 'quick-test'
 include 'spring-boot-test'
 include 'spring-boot-mybatis'
